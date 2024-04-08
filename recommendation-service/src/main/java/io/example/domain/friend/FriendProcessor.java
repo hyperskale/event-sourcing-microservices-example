@@ -37,7 +37,7 @@ public class FriendProcessor {
 
 		User user = userRepository.findUserByUserId(friendEvent.getPayload().getSubject().getUserId());
 		User friend = userRepository.findUserByUserId(friendEvent.getPayload().getSubject().getFriendId());
-
+		System.out.println(" comment to test code rabbit code review")
 		if (user == null || friend == null) {
 			throw new RuntimeException("Invalid user identifier for " + friendEvent.getPayload().getEventType() +
 					" operation on one or more users: " + Arrays.asList(user, friend).toString());
